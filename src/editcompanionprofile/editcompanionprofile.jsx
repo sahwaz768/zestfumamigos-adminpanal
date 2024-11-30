@@ -1,17 +1,19 @@
+
+
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-const Createcompanion = () => {
+const Editcompanionprofile = () => {
   const [formData, setFormData] = useState({
-    username: "",
-    gender: "",
-    skinTone: "",
-    bodyType: "",
-    age: "",
-    location: "",
-    email: "",
+    username: "hello",
+    gender: "male",
+    skinTone: "dark",
+    bodyType: "skinny",
+    age: "25",
+    location: "new delhi",
+    email: "kon@gmail.com",
     images: [],
-    eatingHabit: "", // New field for eating habit
+    eatingHabit: "veg", 
   });
 
   const [errors, setErrors] = useState({});
@@ -55,18 +57,8 @@ const Createcompanion = () => {
     if (validateForm()) {
       console.log("Form data submitted:", formData);
 
-      // Reset form data and errors
-      setFormData({
-        username: "",
-        gender: "",
-        skinTone: "",
-        bodyType: "",
-        age: "",
-        location: "",
-        email: "",
-        images: [],
-        eatingHabit: "",
-      });
+      alert('hey the profile updated successfully')
+     
       setErrors({});
     }
   };
@@ -76,7 +68,7 @@ const Createcompanion = () => {
     <div className="signup-topbox">
     <div>
     <form onSubmit={handleSubmit} className="signup-form">
-    <h1 className="signup-heading">Create companion profile</h1>
+    <h1 className="signup-heading">Edit companion profile</h1>
     <div className="signup-subbox">
       <div>
         <label>Username</label>
@@ -299,4 +291,9 @@ ImageUploader.propTypes = {
   onUpload: PropTypes.func.isRequired,
 };
 
-export default Createcompanion;
+export default Editcompanionprofile;
+
+
+
+
+

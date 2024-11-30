@@ -435,3 +435,39 @@ body {
   color: #666;
   cursor: pointer;
 }
+.select-btn{
+  width: 300px;
+  padding: 7px 10px;
+  color: black;
+
+}
+.signup-heading{
+  margin: 20px 5px;
+}
+.signup-topbox{
+  display: flex;
+  justify-content: center;
+}
+.signup-subbox{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.sbt-btn{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.create-sbt-btn{
+  width: 300px;
+  padding: 10px 10px;
+  background-color: rgb(250, 82, 90);
+  border-radius: 10px;
+  color: white;
+}
+.signup-footer{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: palevioletred;
+}

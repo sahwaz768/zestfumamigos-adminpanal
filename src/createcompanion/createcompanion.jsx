@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
+import withAuth from "../hoc/wihAuth";
 
 const Createcompanion = () => {
   const [formData, setFormData] = useState({
@@ -299,4 +300,4 @@ ImageUploader.propTypes = {
   onUpload: PropTypes.func.isRequired,
 };
 
-export default Createcompanion;
+export default withAuth(Createcompanion);

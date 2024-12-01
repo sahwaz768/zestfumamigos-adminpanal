@@ -1,22 +1,33 @@
-import  { useState } from 'react';
-
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { removeUserData } from "../../utils/removeUserData";
+import { datafetched } from "../../Redux/auth/auth.reducer";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const dispatch = useDispatch();
+  const navigator = useNavigate();
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleLogout = async () => {
+    await removeUserData();
+    dispatch(datafetched(null));
+    navigator("/", { replace: true });
   };
 
   return (
     <div className="sidebar-container">
       {/* Sidebar Toggle Button */}
       <button
-        className={`sidebar-toggle ${isOpen ? 'active' : ''}`}
+        className={`sidebar-toggle ${isOpen ? "active" : ""}`}
         onClick={toggleSidebar}
       >
         <svg
-          className={`toggle-icon ${isOpen ? 'rotate' : ''}`}
+          className={`toggle-icon ${isOpen ? "rotate" : ""}`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -31,11 +42,11 @@ const Sidebar = () => {
       </button>
 
       {/* Sidebar Content */}
-      <div className={`sidebar ${isOpen ? 'open' : ''}`}>
+      <div className={`sidebar ${isOpen ? "open" : ""}`}>
         <div className="sidebar-content">
           <div className="sidebar-title">
-          <h3>Hey Sahwaz</h3>
-          <p>sahwazalam768@gmail.com</p>
+            <h3>Hey Sahwaz</h3>
+            <p>sahwazalam768@gmail.com</p>
           </div>
           <nav>
             <ul className="nav-list">
@@ -51,13 +62,11 @@ const Sidebar = () => {
               </li>
               <li>
                 <a href="#" className="nav-link">
-                 Ticket raised
+                  Ticket raised
                 </a>
               </li>
               <li>
-                <a href="#" className="nav-link">
-                  Logout
-                </a>
+                <div onClick={handleLogout} style={{ cursor: 'pointer' }}>Logout</div>
               </li>
             </ul>
           </nav>

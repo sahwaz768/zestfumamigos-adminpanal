@@ -3,24 +3,20 @@ import Sidebar from "./Component/sidebar";
 
 const Admindashboard = () => {
   const showgenerakbooking = () => {
-    document.getElementById("extention-request-description").style.display =
-      "none";
-    document.getElementById("general-request-description").style.display =
-      "block";
-    document.getElementById("general-request").style.backgroundColor =
-      "rgb(248, 72, 99)";
-    document.getElementById("extention-request ").style.backgroundColor =
-      "rgb(255, 251, 251)";
+    document.getElementById('extention-request-description').style.display = 'none';
+    document.getElementById('general-request-description').style.display = 'block';
+    document.getElementById('general-request').classList.add('clickbtn');
+    document.getElementById('extention-request').classList.remove('clickbtn2');
+
+    
+    
   };
   const showextentionbooking = () => {
-    document.getElementById("extention-request-description").style.display =
-      "block";
-    document.getElementById("general-request-description").style.display =
-      "none";
-    document.getElementById("extention-request ").style.backgroundColor =
-      "rgb(248, 72, 99)";
-    document.getElementById("general-request").style.backgroundColor =
-      "rgb(255, 251, 251)";
+    document.getElementById('extention-request-description').style.display = 'block';
+    document.getElementById('general-request-description').style.display = 'none';
+    document.getElementById('general-request').classList.remove('clickbtn');
+    document.getElementById('extention-request').classList.add('clickbtn2');
+    
   };
 
   return (
@@ -35,11 +31,7 @@ const Admindashboard = () => {
           >
             <h4>Slote Request</h4>
           </div>
-          <div
-            className="extention-request"
-            onClick={showextentionbooking}
-            id="extention-request"
-          >
+          <div className="extention-request clickbtn2" onClick={showextentionbooking} id="extention-request">
             <h4>Extention Request</h4>
           </div>
         </div>

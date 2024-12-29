@@ -202,11 +202,13 @@ body {
 
 .slot-request {
   display: flex;
+  
+
 }
 .general-request {
   width: 39vw;
   text-align: center;
-  
+
   height: 5vh;
   padding: 10px 5px;
   cursor: pointer;
@@ -226,71 +228,83 @@ body {
   height: 92vh;
   overflow-y: auto;
   display: none;
-  
- 
-  
 }
-.xyz{
+.xyz {
   padding: 5px 10px 10px 10px;
   background-color: rgb(253, 231, 235);
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.user-profile img{
+.user-profile img {
   width: 180px;
   height: 140px;
   border-radius: 20px;
- 
-  
 }
-.user-profile{
+.user-profile {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 20px;
-
 }
-.companion-booking-detail{
+.companion-booking-detail {
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
   margin-top: 10px;
-
 }
-.booking-detail{
+.booking-detail {
   margin-top: 10px;
 }
-.purpose-booking{
+.purpose-booking {
   display: flex;
   gap: 10px;
-
 }
-.meetup-location{
+.meetup-location {
   display: flex;
   margin-top: 10px;
   gap: 10px;
 }
-.accept-btn{
+.accept-btn {
   width: 50%;
   background-color: rgb(94, 235, 94);
-  padding: 10px ;
+  padding: 10px;
   border-radius: 10px;
-
 }
-.reject-btn{
+.reject-btn {
   width: 50%;
   background-color: rgb(255, 88, 88);
-  padding: 10px ;
+  padding: 10px;
   border-radius: 10px;
 }
-.extention-request-description{
+.extention-request-description {
   height: 92vh;
   overflow-y: auto;
- 
+}
+.clickbtn{
+  background-color: rgb(253, 49, 49);
+}
+.clickbtn2{
+  background-color: rgb(253, 49, 49);
+}
+@media (max-width: 768px) {
+  .slot-request{
+    margin-top: 60px;
+  }
+  .general-request-description{
+    width: 100vw;
+  }
+  .extention-request-description{
+    width: 100vw;
+  }
+  .general-request{
+    width: 50vw;
+  }
+  .extention-request{
+    width: 50vw;
+  }
 }
 
 /* create companion profile */
-
 
 /* SignupForm.css */
 
@@ -362,13 +376,11 @@ body {
   background-color: #0056b3;
 }
 
-
 .image-uploader {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   max-width: 500px;
-  
 }
 
 .image-container {
@@ -435,39 +447,248 @@ body {
   color: #666;
   cursor: pointer;
 }
-.select-btn{
+.select-btn {
   width: 300px;
   padding: 7px 10px;
   color: black;
-
 }
-.signup-heading{
+.signup-heading {
   margin: 20px 5px;
 }
-.signup-topbox{
+.signup-topbox {
   display: flex;
   justify-content: center;
 }
-.signup-subbox{
+.signup-subbox {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
-.sbt-btn{
+.sbt-btn {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
-.create-sbt-btn{
+.create-sbt-btn {
   width: 300px;
   padding: 10px 10px;
   background-color: rgb(250, 82, 90);
   border-radius: 10px;
   color: white;
 }
-.signup-footer{
+.signup-footer {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
   color: palevioletred;
+}
+
+@media (max-width: 620px) {
+  .signup-topbox {
+    margin-left: 140px;
+  }
+  
+}
+@media (max-width: 440px) {
+  .signup-topbox {
+    margin-left: 20px;
+  }
+  
+}
+
+/* ticket page */
+.ticket-heading {
+  background-color: rgb(252, 117, 117);
+  font-family: "Sacramento", cursive;
+  font-weight: 600;
+  font-style: normal;
+  text-align: center;
+  padding: 12px 5px;
+  color: white;
+}
+.search-filter {
+  display: flex;
+  justify-content: end;
+  margin-right: 20px;
+}
+.search-filter input {
+  width: 250px;
+  padding: 10px;
+  border-radius: 10px;
+  border-color: rgb(248, 78, 78);
+}
+.search-filter button {
+  background-color: rgb(250, 92, 118);
+  color: white;
+  padding: 5px 8px;
+  border-radius: 10px;
+}
+
+.support-head {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 30px;
+}
+
+.support {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  float: right;
+  cursor: pointer;
+}
+.support-box {
+  background-color: rgb(243, 242, 242);
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 30px;
+  padding: 0px 10px;
+  border-radius: 10px;
+}
+.support-box-head {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 30px;
+  padding: 0px 10px;
+}
+
+.support-row {
+  width: 30%;
+  padding: 10px;
+}
+.support-row-head {
+  width: 30%;
+}
+.support-row-2 {
+  border-radius: 10px;
+  padding: 2px 20px;
+  height: 30px;
+  background-color: rgb(247, 66, 66);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 5px;
+  margin-left: auto;
+}
+.support-row-2-head {
+  margin-left: auto;
+}
+.pending {
+  border-radius: 10px;
+  padding: 2px 20px;
+  height: 30px;
+  width: fit-content;
+  background-color: rgb(4, 192, 4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 5px;
+}
+
+@media (max-width: 570px) {
+  .support-box {
+    margin: 10px 5px;
+    
+  }
+  .pending{
+    padding: 1px 4px;
+  }
+  .support-row-2{
+    padding: 2px 4px;
+  }
+  .support-row-head {
+    width: 25%;
+    padding-left: 15px;
+  }
+  .support-box-head{
+    margin: 10px 2px;
+  }
+  
+}
+
+/* ticketchat */
+
+.ticket-head {
+  background-color: rgb(253, 108, 115);
+  display: flex;
+  gap: 20px;
+  padding: 10px 20px;
+  align-items: center;
+  color: white;
+}
+
+.message-container {
+  padding: 20px;
+  max-width: 92%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.admin-message,
+.reply-message {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-bottom: 16px;
+  padding: 16px;
+}
+
+.message-header,
+.reply-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.message-body,
+.reply-body {
+  font-size: 14px;
+}
+
+.reply-button {
+  padding: 5px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.reply-button:hover {
+  background-color: #0056b3;
+}
+
+.reply-textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.send-button {
+  padding: 8px 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.send-button:hover {
+  background-color: #218838;
+}
+
+.replies {
+  margin-top: 16px;
 }

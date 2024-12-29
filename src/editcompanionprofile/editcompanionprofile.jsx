@@ -201,7 +201,7 @@ const Editcompanionprofile = () => {
 <div className="sbt-btn">
       <button type="submit" className="create-sbt-btn">Submit</button>
       </div>
-      <p className="signup-footer">edit companion profile</p>
+    
     </form>
     </div>
     </div>
